@@ -22,7 +22,7 @@ export default function CapsuleFeatureSection() {
 
   return (
     <SectionWrapper className="px-6 md:px-0 w-full py-16 text-white font-mono">
-      <div className="max-w-7xl mx-auto border border-white/20">
+      <div className="max-w-7xl 2xl:max-w-full mx-auto border border-white/20">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
 
           {features.map((item, i) => (

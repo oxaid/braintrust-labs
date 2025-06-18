@@ -55,11 +55,11 @@ export default function Home() {
 
       {/* SLIDER SECTION */}
       <section className=" text-white font-mono py-20 lg:py-24 px-6 md:px-16">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 items-center">
 
           {/* Kiri: Teks */}
-          <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-4">
+          <div className="md:col-span-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-4 ">
               Build the Future of <br /> Collective Intelligence
             </h2>
             <p className="text-sm sm:text-base text-white/80 leading-relaxed">
@@ -71,7 +71,7 @@ export default function Home() {
           </div>
 
           {/* Kanan: Icon bunga gembok */}
-          <div className="flex justify-center ">
+          <div className="flex justify-center md:col-span-1">
             <img src={brain} alt="lock" className="w-40 sm:w-48 md:w-56 animate-spin-infinite" />
           </div>
         </div>
@@ -111,7 +111,7 @@ export default function Home() {
 
           {/* Left Side (Text) */}
           <div className="lg:col-span-4 lg:flex justify-center">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Ready to mint your <br />
               <span className="text-[#001B54]">[First Thought]</span>?
             </h2>

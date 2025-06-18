@@ -192,7 +192,7 @@ export default function CapsuleCarousel() {
 
 
   return (
-    <div className="w-full mt-20 border border-[#37B7C3] min-h-auto">
+    <div className="max-w-5xl mx-auto mt-20 border border-[#37B7C3] min-h-auto">
       <Swiper
         modules={[Autoplay, Pagination]}
         pagination={{ clickable: true }}
@@ -211,7 +211,7 @@ export default function CapsuleCarousel() {
           <div className="relative w-full px-6 py-10 overflow-hidden">
             <p className="text-xs text-white/60 absolute top-4 left-4 z-10">Public Marketplace</p>
             <div className="absolute inset-0 z-0 opacity-20  pointer-events-none">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {capsules.map((capsule) => (
                   <div
                     key={capsule.id}

@@ -50,19 +50,19 @@ export default function HeroSection() {
         loop
         playsInline
       />
-      <div ref={heroRef} className="w-full lg:w-3/5 text-left lg:pt-20 transition-all">
-        <h1 className="text-white font-mono text-3xl sm:text-4xl lg:text-[48px] md:leading-tight font-semibold tracking-tighter">
+      <div ref={heroRef} className="w-full lg:w-3/5 xl:w-2/3 text-left lg:pt-20 transition-all">
+        <h1 className="text-white font-mono text-3xl sm:text-4xl lg:text-[48px] 2xl:text-[64px] md:leading-tight font-semibold tracking-tighter">
           {renderWithHighlight(text)}
         </h1>
 
-        <p className="text-white mt-4 text-xs sm:text-sm font-mono font-normal">
+        <p className="text-white mt-4 text-xs sm:text-sm md:text-md 2xl:text-lg font-mono font-normal">
           Mint, trade, and archive ideas — before the world catches up.
         </p>
 
-        <div className="mt-6 flex justify-start gap-5 flex-wrap text-xs lg:text-[16px] font-mono">
+        <div className="mt-6 flex justify-start gap-5 flex-wrap text-xs lg:text-[16px] 2xl:text-[20px] font-mono">
           <button className="flex items-center gap-2 text-white py-2 hover:scale-110 transition duration-500">
             <img src={arrowRight} alt="arrow" className="w-7 h-7" />
-            START BUILDING
+            GET EARLY ACCESS
           </button>
           <button className="flex items-center gap-2 text-white py-2 hover:scale-110 transition duration-500">
             <img src={arrowRight} alt="arrow" className="w-7 h-7" />

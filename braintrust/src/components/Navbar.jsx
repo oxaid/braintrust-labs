@@ -30,7 +30,7 @@ export default function NavbarBraintrust() {
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
       ${scrolled ? "backdrop-blur-md" : ""}`}>
 
-      <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between md:justify-around">
+      <nav className="max-w-7xl x-auto px-4 py-4 flex items-center justify-between md:justify-around  mx-auto">
         {/* Logo */}
         <a href="/">
           <img src={logo} alt="Braintrust Logo" className="h-6 md:h-8 object-contain" />

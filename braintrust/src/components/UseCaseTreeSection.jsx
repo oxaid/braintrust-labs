@@ -35,7 +35,7 @@ export default function UseCaseTreeSection() {
   ];
 
   return (
-   <section className="relative bg-[#3FC4D3] px-4 sm:px-6 md:px-16 lg:px-20 py-24 text-white font-mono overflow-hidden">
+   <section className="relative bg-[#3FC4D3] px-4 sm:px-6 md:px-16 lg:px-20 2xl:px-36 py-24 text-white font-mono overflow-hidden">
       {/* Vertical Line */}
     {/* <div className="hidden md:block absolute z-0 left-1/2 transform -translate-x-1/2 bg-[#001B54] w-[4px] top-[23%] h-[calc(85%-400px)]" /> */}
       <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-[4px] bg-[#001B54] z-0" />
@@ -52,15 +52,15 @@ export default function UseCaseTreeSection() {
           <div key={i} className="relative grid md:grid-cols-2 items-center">
             {/* LEFT SIDE */}
             {i % 2 === 1 ? (
-              <div className="flex flex-col items-end text-right pr-16 relative">
+              <div className="flex flex-col items-start md:items-end text-right pr-16 relative">
 
                 <div className="hidden md:block absolute h-[4px] bg-[#071952] right-0 top-[72px] md:w-[calc(50%-76px)] lg:w-[calc(30%-76px)]" />
-                <div className="w-24 h-24 md:w-36 md:h-36 border-4 border-[#071952] flex items-center justify-center bg-[#3FC4D3] z-10">
+                <div className="w-28 h-28 md:w-36 md:h-36 2xl:w-48 2xl:h-48 border-4 border-[#071952] flex items-center justify-center bg-[#3FC4D3] z-10">
                   <img src={item.icon} alt="icon" className="w-2/3 h-2/3 object-contain" />
                 </div>
-                <div className="mt-4 md:mt-8 leading-relaxed whitespace-pre-line text-left w-full max-w-md">
-                  <p className="font-bold mb-2 text-sm sm:text-base md:text-2xl lg:text-[36px]">{item.title}</p>
-                  <p className="text-white/90 lg:text-lg">{item.desc}</p>
+                <div className="mt-4 md:mt-8 2xl:mt-10 leading-relaxed whitespace-pre-line text-left w-full max-w-md">
+                  <p className="font-bold mb-2 text-xl md:text-2xl lg:text-[36px] 2xl:text-[42px] xl:leading-snug">{item.title}</p>
+                  <p className="text-white/90 text-sm md:text-base lg:text-lg 2xl:text-[20px]">{item.desc}</p>
                 </div>
               </div>
             ) : (
@@ -69,14 +69,14 @@ export default function UseCaseTreeSection() {
 
             {/* RIGHT SIDE */}
             {i % 2 === 0 ? (
-              <div className="flex flex-col items-start text-left pl-16 relative">
+              <div className="flex flex-col items-end md:items-start text-left pl-16 relative">
                 <div className="hidden md:block absolute h-[4px] bg-[#001B54] left-0 top-[72px] md:w-[calc(50%-72px)] lg:w-[calc(30%-72px)]" />
-                <div className="w-24 h-24 md:w-36 md:h-36 border-4 border-[#001B54] flex items-center justify-center bg-[#3FC4D3] z-10">
+                <div className="w-28 h-28 md:w-36 md:h-36 2xl:w-48 2xl:h-48 border-4 border-[#001B54] flex items-center justify-center bg-[#3FC4D3] z-10">
                   <img src={item.icon} alt="icon" className="w-2/3 h-2/3 object-contain" />
                 </div>
-                <div className="mt-4 md:mt-8 leading-relaxed whitespace-pre-line text-right w-full max-w-md">
-                  <p className="font-bold mb-2 text-sm sm:text-base md:text-2xl lg:text-[36px]">{item.title}</p>
-                  <p className="text-white/90">{item.desc}</p>
+                <div className="mt-4 md:mt-8 2xl:mt-10 leading-relaxed whitespace-pre-line text-right w-full max-w-md">
+                  <p className="font-bold mb-2 text-xl md:text-2xl lg:text-[36px] 2xl:text-[42px] xl:leading-snug">{item.title}</p>
+                  <p className="text-white/90 text-sm md:text-base lg:text-lg 2xl:text-[20px] ">{item.desc}</p>
                 </div>
               </div>
             ) : (
