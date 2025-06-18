@@ -43,10 +43,15 @@ export default function Home() {
       <IntroSection/>
 
       {/* FEATURES SECTION */}
-      <FeaturesSection/>
+      <div id="howitworks">
+        <FeaturesSection />
+      </div>
+      {/* <FeaturesSection/> */}
 
        {/* FEATURES SECTION */}
-      <UseCaseTreeSection/>
+       <div id="usecase">
+        <UseCaseTreeSection />
+      </div>
 
       {/* SLIDER SECTION */}
       <section className=" text-white font-mono py-20 lg:py-24 px-6 md:px-16">

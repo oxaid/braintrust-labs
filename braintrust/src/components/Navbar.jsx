@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
+import { Link } from "react-scroll";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import logo from "../assets/icons/logo.svg"
 import iconX from "../assets/icons/x.svg"
@@ -19,8 +20,8 @@ export default function NavbarBraintrust() {
   }, [])
 
   const navItems = [
-    { name: "HOW IT WORKS", to: "#" },
-    { name: "USE CASES", to: "#" },
+    { name: "HOW IT WORKS", to: "howitworks" },
+    { name: "USE CASES", to: "usecase" },
     { name: "CONTACT", to: "#" },
     { name: "DOCS", to: "#" },
   ]
@@ -31,12 +32,12 @@ export default function NavbarBraintrust() {
 
       <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between md:justify-around">
         {/* Logo */}
-        <Link to="/">
+        <a href="/">
           <img src={logo} alt="Braintrust Logo" className="h-6 md:h-8 object-contain" />
-        </Link>
+        </a>
 
         {/* Desktop menu */}
-        <div className="hidden md:flex items-center gap-8 lg:gap-12 text-xs font-mono text-white">
+        <div className="hidden md:flex items-center gap-8 lg:gap-12 text-xs font-mono text-white cursor-pointer">
           {navItems.map((item, i) => (
             <Link
               key={i}
