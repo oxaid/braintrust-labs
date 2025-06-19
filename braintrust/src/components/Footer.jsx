@@ -44,9 +44,9 @@ export default function Footer() {
        <div className="md:col-span-5 grid grid-cols-2 gap-y-3 gap-x-8 text-xs text-white/80">
           <a href="#" className="hover:underline transition">START BUILDING</a>
           <a href="#" className="hover:underline transition">CAREERS</a>
-          <a href="#" className="hover:underline transition">HOW IT WORKS</a>
-          <a href="#" className="hover:underline transition">CONTACT</a>
-          <a href="#" className="hover:underline transition">USE CASES</a>
+          <a href="#howitworks" className="hover:underline transition">HOW IT WORKS</a>
+          <a href="/contact" className="hover:underline transition">CONTACT</a>
+          <a href="#usecase" className="hover:underline transition">USE CASES</a>
           <a href="#" className="hover:underline transition">SUPPORT</a>
           <a href="/privacy-policy" className="hover:underline transition">PRIVACY POLICY</a>
           <a href="/terms-of-services" className="hover:underline transition">TERMS OF SERVICES</a>
