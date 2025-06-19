@@ -68,13 +68,13 @@ export default function NavbarBraintrust() {
         )}
           {/* Image icons */}
           <div className="flex items-center gap-4 ml-4">
-            <a href="..." target="_blank" rel="noopener noreferrer" className="transition-transform duration-200 hover:scale-110">
+            <a href="https://x.com/Braintrustlabs" target="_blank" rel="noopener noreferrer" className="transition-transform duration-200 hover:scale-110">
               <img src={iconX} alt="X" className="w-4 h-4" />
             </a>
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"  className="transition-transform duration-200 hover:scale-110">
+            <a href="https://github.com/TuRuSkT11/braintrust" target="_blank" rel="noopener noreferrer"  className="transition-transform duration-200 hover:scale-110">
               <img src={iconGithub} alt="GitHub" className="w-4 h-4" />
             </a>
-            <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer"  className="transition-transform duration-200 hover:scale-110">
+            <a href="https://t.me/Braintrustlabs" target="_blank" rel="noopener noreferrer"  className="transition-transform duration-200 hover:scale-110">
               <img src={iconTelegram} alt="Telegram" className="w-4 h-4" />
             </a>
           </div>
@@ -119,13 +119,13 @@ export default function NavbarBraintrust() {
               )
             )}
           <div className="flex gap-4 pt-4 border-t border-white/30">
-            <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="transition-transform duration-200 hover:scale-110">
+            <a href="https://x.com/Braintrustlabs" target="_blank" rel="noopener noreferrer" className="transition-transform duration-200 hover:scale-110">
               <img src={iconX} alt="X" className="w-4 h-4" />
             </a>
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="transition-transform duration-200 hover:scale-110">
+            <a href="https://github.com/TuRuSkT11/braintrust" target="_blank" rel="noopener noreferrer" className="transition-transform duration-200 hover:scale-110">
               <img src={iconGithub} alt="GitHub" className="w-4 h-4" />
             </a>
-            <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="transition-transform duration-200 hover:scale-110">
+            <a href="https://t.me/Braintrustlabs" target="_blank" rel="noopener noreferrer" className="transition-transform duration-200 hover:scale-110">
               <img src={iconTelegram} alt="Telegram" className="w-4 h-4" />
             </a>
           </div>

@@ -28,13 +28,13 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex gap-4 mt-4">
-            <a href="">
+            <a href="https://x.com/Braintrustlabs">
               <img src={iconX} alt="X" className="w-4 h-4" />
             </a>
-            <a href="">
+            <a href="https://github.com/TuRuSkT11/braintrust">
               <img src={iconGithub} alt="GitHub" className="w-4 h-4" />
             </a>
-            <a href="">
+            <a href="https://t.me/Braintrustlabs">
               <img src={iconTelegram} alt="Telegram" className="w-4 h-4" />
             </a>
           </div>

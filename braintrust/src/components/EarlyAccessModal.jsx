@@ -7,8 +7,8 @@ export default function EarlyAccessModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center">
-      <div className="relative bg-white text-[#071952] max-w-4xl w-full mx-6 md:mx-auto my-24 md:my-40 px-8 md:px-16 py-10 rounded-md space-y-6">
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-md z-50 flex items-center justify-center">
+      <div className="relative bg-white text-[#071952] max-w-4xl w-full mx-6 md:mx-auto my-24 md:my-40 px-8 md:px-16 py-10 md:pb-20 rounded-md space-y-6">
         <button
           className="absolute top-4 right-4 text-[#071952] hover:text-red-600"
           onClick={onClose}
