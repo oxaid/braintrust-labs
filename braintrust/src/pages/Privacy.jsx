@@ -5,7 +5,7 @@ export default function Privacy() {
   return (
       <section className="max-w-3xl mx-auto text-white px-6 md:px-16 py-36 leading-relaxed">
       <div className="max-w-5xl mx-auto space-y-10 text-base md:text-[16px] tracking-tight leading-normal md:leading-[26px]">
-        <h1 className="text-3xl md:text-5xl font-bold">🛡️ Privacy Policy</h1>
+        <h1 className="text-3xl md:text-5xl font-bold font-mono">[Privacy Policy]</h1>
         <p className="text-gray-400">Last Updated: June 15, 2025</p>
 
         <p>
@@ -63,7 +63,7 @@ export default function Privacy() {
           </ul>
         </div>
 
-      
+
         <p className="pt-10 text-lg font-semibold text-[#37B7C3]">
           Think freely. Own your thoughts. Stay in control.
         </p>

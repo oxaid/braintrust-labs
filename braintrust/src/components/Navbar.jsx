@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-// import { Link } from "react-router-dom"
+import { useLocation } from "react-router-dom";
 import { Link } from "react-scroll";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import logo from "../assets/icons/logo.svg"
@@ -26,17 +26,24 @@ export default function NavbarBraintrust() {
     { name: "DOCS", to: "#" },
   ]
 
+  const hiddenPaths = ["/privacy-policy", "/terms-of-services"];
+  const isHiddenPage = hiddenPaths.includes(location.pathname);
+
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
       ${scrolled ? "backdrop-blur-md" : ""}`}>
 
-      <nav className="max-w-7xl x-auto px-4 py-4 flex items-center justify-between md:justify-around  mx-auto">
+      <nav className={`
+      ${isHiddenPage ? "max-w-5xl x-auto px-4 md:px-5 py-5 md:py-4 flex items-center justify-between md:justify-between mx-auto" : "max-w-7xl x-auto px-4 py-4 flex items-center justify-between  mx-auto md:justify-around"
+        }`}>
+
         {/* Logo */}
         <a href="/">
           <img src={logo} alt="Braintrust Logo" className="h-6 md:h-8 object-contain" />
         </a>
 
         {/* Desktop menu */}
+        {!isHiddenPage && (
         <div className="hidden md:flex items-center gap-8 lg:gap-12 text-xs font-mono text-white cursor-pointer">
           {navItems.map((item, i) => (
             <Link
@@ -60,14 +67,18 @@ export default function NavbarBraintrust() {
             </a>
           </div>
         </div>
+          )}
 
         {/* Mobile toggle */}
+        {!isHiddenPage && (
         <div className="md:hidden text-white">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
           </button>
         </div>
+        )}
       </nav>
+
 
       {/* Mobile menu */}
       {isOpen && (
