@@ -23,7 +23,6 @@ export default function NavbarBraintrust() {
   { name: "HOW IT WORKS", to: "howitworks", scroll: true },
   { name: "USE CASES", to: "usecase", scroll: true },
   { name: "CONTACT", to: "/contact", scroll: false },  // ini jadi link biasa
-  { name: "DOCS", to: "#", scroll: false },
 ];
 
   const hiddenPaths = ["/privacy-policy", "/terms-of-services", "/contact"];
