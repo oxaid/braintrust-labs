@@ -54,7 +54,7 @@ function AnimatedRoutes() {
 export default function App() {
   return (
     <Router>
-      <Toaster position="top-right" reverseOrder={false} />
+      <Toaster position="top-center" reverseOrder={false} />
       <AnimatedRoutes />
     </Router>
   )
