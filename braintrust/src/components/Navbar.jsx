@@ -20,13 +20,13 @@ export default function NavbarBraintrust() {
   }, [])
 
   const navItems = [
-    { name: "HOW IT WORKS", to: "howitworks" },
-    { name: "USE CASES", to: "usecase" },
-    { name: "CONTACT", to: "#" },
-    { name: "DOCS", to: "#" },
-  ]
+  { name: "HOW IT WORKS", to: "howitworks", scroll: true },
+  { name: "USE CASES", to: "usecase", scroll: true },
+  { name: "CONTACT", to: "/contact", scroll: false },  // ini jadi link biasa
+  { name: "DOCS", to: "#", scroll: false },
+];
 
-  const hiddenPaths = ["/privacy-policy", "/terms-of-services"];
+  const hiddenPaths = ["/privacy-policy", "/terms-of-services", "/contact"];
   const isHiddenPage = hiddenPaths.includes(location.pathname);
 
   return (
@@ -45,15 +45,27 @@ export default function NavbarBraintrust() {
         {/* Desktop menu */}
         {!isHiddenPage && (
         <div className="hidden md:flex items-center gap-8 lg:gap-12 text-xs font-mono text-white cursor-pointer">
-          {navItems.map((item, i) => (
+          {navItems.map((item, i) =>
+          item.scroll ? (
             <Link
               key={i}
               to={item.to}
+              smooth={true}
+              duration={500}
               className="text-[14px] relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1.5px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
             >
               {item.name}
             </Link>
-          ))}
+          ) : (
+            <a
+              key={i}
+              href={item.to}
+              className="text-[14px] relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1.5px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >
+              {item.name}
+            </a>
+          )
+        )}
           {/* Image icons */}
           <div className="flex items-center gap-4 ml-4">
             <a href="..." target="_blank" rel="noopener noreferrer" className="transition-transform duration-200 hover:scale-110">
@@ -83,11 +95,29 @@ export default function NavbarBraintrust() {
       {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-[#071952]/80 backdrop-blur-md px-4 py-6 space-y-4 text-white font-mono text-sm transition-all duration-300">
-          {navItems.map((item, i) => (
-            <Link key={i} to={item.to} onClick={() => setIsOpen(false)} className="block">
-              {item.name}
-            </Link>
-          ))}
+          {navItems.map((item, i) =>
+            item.scroll ? (
+              <Link
+                key={i}
+                to={item.to}
+                smooth={true}
+                duration={500}
+                onClick={() => setIsOpen(false)}
+                className="block text-white font-mono py-2 cursor-pointer"
+              >
+                {item.name}
+              </Link>
+              ) : (
+                <a
+                  key={i}
+                  href={item.to}
+                  onClick={() => setIsOpen(false)}
+                  className="block text-white font-mono py-2"
+                >
+                  {item.name}
+                </a>
+              )
+            )}
           <div className="flex gap-4 pt-4 border-t border-white/30">
             <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="transition-transform duration-200 hover:scale-110">
               <img src={iconX} alt="X" className="w-4 h-4" />

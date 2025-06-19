@@ -1,3 +1,4 @@
+import { useState } from "react"
 import SectionWrapper from "../components/SectionWrapper"
 import HeroSection from "../components/HeroSection"
 import FeaturesSection from "../components/Features"
@@ -5,8 +6,12 @@ import UseCaseTreeSection from '../components/UseCaseTreeSection'
 import IntroSection from '../components/IntroSection'
 import brain from "../assets/icons/brain.svg"
 import CoomingSoom from '../components/CoomingSoon'
-import lockIcon from '../assets/icons/lock-icon.svg'; // ganti path
+import EarlyAccessModal from "../components/EarlyAccessModal";
+
+
 export default function Home() {
+
+  const [showModal, setShowModal] = useState(false); // ⬅️ STATE MODAL
 
   return (
      <main className="w-full">
@@ -126,7 +131,9 @@ export default function Home() {
             </p>
 
             <div className="flex items-center justify-end lg:justify-center gap-1">
-              <button className="text-[#001B54] text-lg lg:text-[32px] font-bold text-left  hover:underline transition">
+              <button className="text-[#001B54] text-lg lg:text-[32px] font-bold text-left  hover:underline transition"
+              onClick={() => setShowModal(true)}
+              >
                 Get early access
                 <span className="text-3xl leading-none">↗</span>
               </button>
@@ -135,6 +142,9 @@ export default function Home() {
           </div>
         </div>
       </SectionWrapper>
+
+      {/* ⬇️ Modal dipanggil di bawah */}
+      <EarlyAccessModal isOpen={showModal} onClose={() => setShowModal(false)} />
 
     </main>
   )

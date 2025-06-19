@@ -58,7 +58,7 @@ export default function Footer() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="focus:outline-none"
           >
-            <img src={arrowRightTop} alt="Arrow" className="w-24 md:w-28" />
+            <img src={arrowRightTop} alt="Arrow" className="w-12 md:w-20 lg:w-28" />
           </button>
           <p className="text-[10px] text-white/50">©2025 BRAINTRUST. ALL RIGHTS RESERVED</p>
         </div>

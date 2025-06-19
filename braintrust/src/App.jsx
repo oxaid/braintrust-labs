@@ -5,6 +5,7 @@ import PageLayout from "./components/PageLayout"
 import Home from "./pages/Home"
 import Privacy from "./pages/Privacy"
 import Terms from "./pages/Terms"
+import Contact from "./pages/Contact"
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -33,6 +34,14 @@ function AnimatedRoutes() {
           element={
             <PageLayout noPadding>
               <PageWrapper><Terms /></PageWrapper>
+            </PageLayout>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <PageLayout noPadding>
+              <PageWrapper><Contact /></PageWrapper>
             </PageLayout>
           }
         />

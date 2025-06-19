@@ -1,12 +1,14 @@
 // src/components/HeroSection.jsx
 import arrowRight from "../assets/icons/arrow-right.svg"
 import { useEffect, useRef, useState } from "react"
+import EarlyAccessModal from "./EarlyAccessModal";
 
 export default function HeroSection() {
   const heroRef = useRef(null)
   const [text, setText] = useState("")
   const fullText = "The first decentralized AI memory vault on Solana"
   const highlightWord = "memory vault"
+  const [showModal, setShowModal] = useState(false); // ⬅️ STATE MODAL
 
   useEffect(() => {
     let i = 0
@@ -60,7 +62,9 @@ export default function HeroSection() {
         </p>
 
         <div className="mt-6 flex justify-start gap-5 flex-wrap text-xs lg:text-[16px] 2xl:text-[20px] font-mono">
-          <button className="flex items-center gap-2 text-white py-2 hover:scale-110 transition duration-500">
+          <button className="flex items-center gap-2 text-white py-2 hover:scale-110 transition duration-500"
+            onClick={() => setShowModal(true)} // ⬅️ Trigger Modal
+          >
             <img src={arrowRight} alt="arrow" className="w-7 h-7" />
             GET EARLY ACCESS
           </button>
@@ -70,6 +74,8 @@ export default function HeroSection() {
           </button>
         </div>
       </div>
+      {/* ⬇️ Modal dipanggil di bawah */}
+      <EarlyAccessModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </section>
   )
 }

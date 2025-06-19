@@ -5,7 +5,7 @@ export default function Terms() {
   return (
       <section className="max-w-3xl mx-auto text-white px-6 md:px-16 py-36 leading-relaxed">
         <div className="max-w-5xl mx-auto space-y-10 text-base md:text-[16px] tracking-tight leading-normal md:leading-[26px]">
-          <h1 className="text-3xl md:text-5xl font-bold font-mono">[Terms of Service]</h1>
+        <h2 className="text-3xl md:text-5xl font-bold font-mono">[Terms of Service]</h2>
         <p className="text-gray-400">Last Updated: June 15, 2025</p>
 
         <p>
