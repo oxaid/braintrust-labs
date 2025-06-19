@@ -68,7 +68,9 @@ export default function HeroSection() {
             <img src={arrowRight} alt="arrow" className="w-7 h-7" />
             GET EARLY ACCESS
           </button>
-          <button className="flex items-center gap-2 text-white py-2 hover:scale-110 transition duration-500">
+          <button
+          onClick={() => window.open("https://github.com/TuRuSkT11/braintrust", "_blank")}
+          className="flex items-center gap-2 text-white py-2 hover:scale-110 transition duration-500">
             <img src={arrowRight} alt="arrow" className="w-7 h-7" />
             LEARN MORE
           </button>
