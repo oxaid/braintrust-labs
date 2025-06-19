@@ -7,8 +7,8 @@ export default function EarlyAccessModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed bg-black/30 inset-0 z-50 flex items-center justify-center">
-      <div className="relative bg-white/50 text-[#071952] backdrop-blur-md max-w-4xl w-full mx-6 md:mx-auto my-24 md:my-40 px-8 md:px-16 py-10 md:pb-20 rounded-md space-y-6">
+    <div className="fixed  inset-0 z-50 flex items-center justify-center">
+      <div className="relative bg-white/70 text-[#071952] backdrop-blur-md max-w-4xl w-full mx-6 md:mx-auto my-24 md:my-40 px-8 md:px-16 py-10 md:pb-20 rounded-md space-y-6">
         <button
           className="absolute top-4 right-4 text-[#071952] hover:text-red-600"
           onClick={onClose}
@@ -16,7 +16,7 @@ export default function EarlyAccessModal({ isOpen, onClose }) {
           <img src={closeButton} alt="Arrow" className="w-11 md:w-14 lg:w-16" />
         </button>
 
-        <h2 className="text-3xl md:text-4xl font-mono font-bold">
+        <h2 className="text-3xl md:text-4xl font-mono font-bold tracking-tighter">
           [Get early Access]
         </h2>
 

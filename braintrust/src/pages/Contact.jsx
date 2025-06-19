@@ -2,6 +2,7 @@
 import { Mail, User, Send } from "lucide-react";
 import { useState } from "react";
 import arrowRight from "../assets/icons/arrow-right.svg"
+import toast from "react-hot-toast";
 
 export default function ContactSection() {
 
@@ -21,9 +22,12 @@ export default function ContactSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!isFormValid) return;
+    if (!isFormValid) {
+      toast.error("Please fill all required fields");
+      return;
+    }
     console.log("Contact Form Data:", formData);
-    alert("Message sent successfully!");
+    toast.success("Your message has been sent!");
     setFormData({ name: "", email: "", category: "", message: "" });
   };
 
