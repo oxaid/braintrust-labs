@@ -1,10 +1,34 @@
 // src/components/EarlyAccessModal.jsx
 import { X } from "lucide-react";
 import closeButton from "../assets/icons/closeButton.svg"
-
+import toast from "react-hot-toast";
+import { useState } from "react";
+import arrowRight from "../assets/icons/arrow-right.svg"
 
 export default function EarlyAccessModal({ isOpen, onClose }) {
   if (!isOpen) return null;
+
+  const [formData, setFormData] = useState({
+    email: "",
+  });
+
+    const isFormValid = formData.email;
+
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      if (!isFormValid) {
+        toast.error("Please fill all required fields");
+        return;
+      }
+      console.log("Contact Form Data:", formData);
+      toast.success("Your message has been sent!");
+      setFormData({  email: ""});
+    };
 
   return (
     <div className="fixed  inset-0 z-50 flex items-center justify-center">
@@ -28,21 +52,29 @@ export default function EarlyAccessModal({ isOpen, onClose }) {
           No spam, just good stuff.
         </p>
 
-        <div>
+        <form onSubmit={handleSubmit}>
+          <div>
           <label className="block font-mono uppercase text-sm  font-bold">Email</label>
           <input
             type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
             className="w-full bg-transparent border-b border-[#071952] focus:outline-none py-2 placeholder-[#071952]"
-            placeholder="you@example.com"
+            placeholder="your@email.com"
           />
         </div>
 
-        {/* <div className="pt-4">
-          <button className="flex items-center gap-2  pt-4 text-sm font-mono uppercase hover:text-[#088395] transition">
-            <span>Submit</span>
-            <span>↗️</span>
+        <div className="pt-4">
+          <button
+            type="submit"
+            disabled={!isFormValid}
+              className="text-[#071952] flex items-center gap-2 text-sm font-mono uppercase hover:text-[#088395] transition disabled:opacity-40 disabled:cursor-not-allowed">
+            <img src={arrowRight} alt="arrow" className="w-7 h-7" />
+            <span>Send Message</span>
           </button>
-        </div> */}
+        </div>
+        </form>
       </div>
     </div>
   );
